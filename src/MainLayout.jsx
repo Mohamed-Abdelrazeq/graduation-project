@@ -5,12 +5,13 @@ import MapView from "./MapView";
 function MainLayout({ videoSources }) {
   return (
     <div className="flex w-full align-middle justify-center mt-16 ">
-      <div className="bg-slate-300 border-4 rounded-xl flex items-center p-4">
+      <div className="bg-slate-300 border-4 rounded-xl flex items-center p-4 ">
         <ReactPlayer
           url={videoSources[0]}
-          // height="52vh"
-          // width="60vw"
+          height="52vh"
+          width="60vw"
           playing={true}
+          muted={true}
         />
       </div>
 
@@ -19,8 +20,9 @@ function MainLayout({ videoSources }) {
           <ReactPlayer
             url={videoSources[1]}
             height="25vh"
-            width="30vw"
+            width="20vw"
             playing={true}
+            muted={true}
           />
         </div>
         <div className=" bg-slate-300 border-4 rounded-3xl p-4">
