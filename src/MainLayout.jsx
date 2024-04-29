@@ -7,30 +7,6 @@ function MainLayout({ videoSources }) {
   const [secView, setSecView] = useState(FaceVideo(videoSources));
   const [isCarMain, setIsCarMain] = useState(true);
 
-  function CarVideo(videoSources, isCarMain) {
-    return (
-      <ReactPlayer
-        url={videoSources[0]}
-        height={!isCarMain ? "52vh" : "25vh"}
-        width={!isCarMain ? "60vw" : "20vw"}
-        playing={true}
-        muted={true}
-      />
-    );
-  }
-
-  function FaceVideo(videoSources, isCarMain) {
-    return (
-      <ReactPlayer
-        url={videoSources[1]}
-        height={isCarMain ? "52vh" : "25vh"}
-        width={isCarMain ? "60vw" : "20vw"}
-        playing={true}
-        muted={true}
-      />
-    );
-  }
-
   const ViewSetter = () => {
     if (isCarMain) {
       setMainView(FaceVideo(videoSources, isCarMain));
@@ -66,3 +42,27 @@ function MainLayout({ videoSources }) {
 }
 
 export default MainLayout;
+
+function CarVideo(videoSources, isCarMain) {
+  return (
+    <ReactPlayer
+      url={videoSources[0]}
+      height={!isCarMain ? "52vh" : "25vh"}
+      width={!isCarMain ? "60vw" : "20vw"}
+      playing={true}
+      muted={true}
+    />
+  );
+}
+
+function FaceVideo(videoSources, isCarMain) {
+  return (
+    <ReactPlayer
+      url={videoSources[1]}
+      height={isCarMain ? "52vh" : "25vh"}
+      width={isCarMain ? "60vw" : "20vw"}
+      playing={true}
+      muted={true}
+    />
+  );
+}
