@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="container mx-auto">
       <MainLayout videoSources={videoUrls} />
-      <div className="flex flex-row">
+      <div className="flex flex-row h-32 justify-around mt-20 align-middle">
         <BatteryLevel />
         <SpeedIndicator />
       </div>

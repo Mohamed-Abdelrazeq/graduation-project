@@ -46,7 +46,7 @@ export default function BatteryLevel() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-64">
       <div className="text-center">
         {batteryInfo.supported ? (
           <div className="flex flex-col items-center justify-center space-y-2">
