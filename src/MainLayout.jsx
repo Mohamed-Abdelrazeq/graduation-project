@@ -2,7 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import MapView from "./MapView";
 
-function VideoStreamLayout({ videoSources }) {
+function MainLayout({ videoSources }) {
   return (
     <div className="flex w-full align-middle justify-center">
       <ReactPlayer
@@ -27,4 +27,4 @@ function VideoStreamLayout({ videoSources }) {
   );
 }
 
-export default VideoStreamLayout;
+export default MainLayout;

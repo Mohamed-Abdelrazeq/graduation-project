@@ -1,4 +1,6 @@
-import VideoStreamLayout from "./VideoStreamLayout";
+import BatteryLevel from "./BatteryLevel";
+import MainLayout from "./MainLayout";
+import SpeedIndicator from "./SpeedIndicator";
 
 const videoUrls = [
   "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
@@ -9,7 +11,11 @@ const videoUrls = [
 function App() {
   return (
     <div className="container mx-auto">
-      <VideoStreamLayout videoSources={videoUrls} />
+      <MainLayout videoSources={videoUrls} />
+      <div className="flex flex-row">
+        <BatteryLevel />
+        <SpeedIndicator />
+      </div>
     </div>
   );
 }
