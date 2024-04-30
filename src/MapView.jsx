@@ -1,27 +1,26 @@
-import React from "react";
-import GoogleMapReact from "google-map-react";
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import React, { useState } from "react";
+import { Map, Marker } from "pigeon-maps";
 
 export default function SimpleMap() {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627,
-    },
-    zoom: 11,
-  };
+  const [hue, setHue] = useState(0);
+  const color = `hsl(${hue % 360}deg 39% 70%)`;
 
   return (
-    // Important! Always set the container height explicitly
-    <div style={{ height: "25vh", width: "100%" }}>
-      {/* <GoogleMapReact
-        bootstrapURLKeys={{ key: import.meta.env.VITE_API_KEY }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
+    <Map height={300} defaultCenter={[50.879, 4.6997]} defaultZoom={11}>
+      <Marker
+        width={50}
+        anchor={[50.879, 4.6997]}
+        color={color}
+        onClick={() => setHue(hue + 20)}
+      />
+      <Marker
+        width={50}
+        anchor={[50.879, 4.6997]}
+        color={color}
+        onClick={() => setHue(hue + 20)}
       >
-        <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
-      </GoogleMapReact> */}
-    </div>
+        {/* <CustomIcon /> */}
+      </Marker>
+    </Map>
   );
 }
