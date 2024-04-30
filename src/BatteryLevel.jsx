@@ -53,7 +53,6 @@ const BatteryInfo = ({ batteryLevel }) => (
 );
 
 const ChargingIcon = ({ batteryLevel }) => {
-  console.log(batteryLevel);
   return (
     <svg
       className={`absolute right-0 mr-[-6px] w-6 h-6 ${
