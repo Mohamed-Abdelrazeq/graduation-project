@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import raw from "../BatteryLevel.txt";
 
 export default function BatteryLevel() {
-  const [batteryLevel, setBatteryLevel] = useState(70);
+  const [batteryLevel, setBatteryLevel] = useState(90);
 
   useEffect(() => {
     fetch(raw)
