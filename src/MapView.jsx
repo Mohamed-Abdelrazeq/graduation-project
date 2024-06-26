@@ -18,9 +18,7 @@ export default function SimpleMap() {
         anchor={[50.879, 4.6997]}
         color={color}
         onClick={() => setHue(hue + 20)}
-      >
-        {/* <CustomIcon /> */}
-      </Marker>
+      ></Marker>
     </Map>
   );
 }

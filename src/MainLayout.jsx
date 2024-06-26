@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import MapView from "./MapView";
+import Webcam from "react-webcam";
 
 function MainLayout({ videoSources }) {
   const [mainView, setMainView] = useState(CarVideo(videoSources));
@@ -57,12 +58,8 @@ function CarVideo(videoSources, isCarMain) {
 
 function FaceVideo(videoSources, isCarMain) {
   return (
-    <ReactPlayer
-      url={videoSources[1]}
-      height={isCarMain ? "52vh" : "25vh"}
-      width={isCarMain ? "60vw" : "20vw"}
-      playing={true}
-      muted={true}
-    />
+    <div className="container">
+      <Webcam height={600} width={600} />
+    </div>
   );
 }
